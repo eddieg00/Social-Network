@@ -13,7 +13,15 @@ module.exports = {
   async getUserById(req, res) {
     try {
       const userData = await User.findOne({ _id: req.params.id })
-
+      .populate({
+        path: "thoughts",
+        select: "-__v",
+      })
+      .populate({
+        path: "friends",
+        select: "-__v",
+      })
+      .select("-__v");
       if (!userData) {
         res.status(404).json({ message: "No user found with that ID." })
         return;
