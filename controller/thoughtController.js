@@ -62,15 +62,15 @@ module.exports = {
   },
   async deleteThought(req, res) {
     try {
-      const thoughtData = await User.findOneAndDelete({ _id: req.params.id });
+      const thoughtData = await Thought.findOneAndDelete({ _id: req.params.id });
 
-      const userData = await User.findOneAndUpdate(
-        { _id: req.params.userId },
-        { $pull: { thoughts: req.params.thoughtId } },
-        { new: true }
-      );
+      // const userData = await User.findOneAndUpdate(
+      //   { _id: req.params.userId },
+      //   { $pull: { thoughts: req.params.thoughtId } },
+      //   { new: true }
+      // );
 
-      if (!userData) {
+      if (!thoughtData) {
         res.status(404).json({ message: "No user found with that ID." });
         return;
       }
