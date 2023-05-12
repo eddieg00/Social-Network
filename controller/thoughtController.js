@@ -83,12 +83,13 @@ module.exports = {
   },
   async addReaction(req, res) {
     try {
-      const reactionData = await User.findOneAndUpdate(
-        { _id: req.params.id },
-        { $addToSet: { reactionId: req.params.reactionId } },
+      console.log(req.body)
+      const reactionData = await Thought.findOneAndUpdate(
+        { _id: req.params.thoughtId },
+        { $addToSet: { reactions: req.body } },
         { new: true }
       );
-
+      console.log(reactionData)
       if (!reactionData) {
         res.status(404).json({ message: "No user found with that ID." });
         return;
@@ -101,12 +102,12 @@ module.exports = {
   },
   async deleteReaction(req, res) {
     try {
-      const reactionData = await User.findOneAndUpdate(
+      const reactionData = await Thought.findOneAndUpdate(
         { _id: req.params.id },
         { $pull: { reactions: { reactionId: req.params.reactionId } } },
         { new: true }
       );
-
+        console.log(reactionData)
       if (!reactionData) {
         res.status(404).json({ message: "No user found with that ID." });
         return;
