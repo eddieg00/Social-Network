@@ -26,7 +26,9 @@ please refer to the license in the repo.
 ## Contributions
 
 ## Video-link
-https://youtu.be/MU4xjFQhwIQ
+https://youtu.be/kOMNRlkIl7A
 
 
-![ScreenShot](https://github.com/eddieg00/myteam-oop/blob/main/assets/sceeenshots/Screenshot%20(28).png)
+## Screenshot
+
+![ScreenShot](https://github.com/eddieg00/Social-Network/blob/main/screenshot/Screenshot%20(31).png)
