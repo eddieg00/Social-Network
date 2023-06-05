@@ -25,6 +25,8 @@ please refer to the license in the repo.
 
 ## Contributions
 
+Fork the repo and clone down to your local machine. Once you have the latest version of the repo, you can add or make changes then submit a pull request for your changes. Please use best practices as well as proper naming conventions and comments depicting what the code segements function is. Finally in the body of your pull request, please explain why these changes you were necissary and if it is a bug what steps can be completed to reproduce this bug. If these guidelines are not met, pull requests will not be reviewed or accepted.
+
 ## Video-link
 https://youtu.be/kOMNRlkIl7A
 
